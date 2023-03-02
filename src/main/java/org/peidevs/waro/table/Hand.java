@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.stream.*;
 import static java.util.stream.Collectors.joining;
 
-public class Hand {
+public value class Hand {
     private final List<Integer> cards;
 
     public Hand() {

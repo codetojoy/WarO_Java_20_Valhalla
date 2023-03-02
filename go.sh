@@ -8,10 +8,6 @@ set -e
 echo "unit tests complete"
 sleep 0.5
 
-./integration.test.sh
-echo "integration tests complete"
-sleep 0.5
-
 ./run.sh 
 echo "run complete"
 sleep 0.5

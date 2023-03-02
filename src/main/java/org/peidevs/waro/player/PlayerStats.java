@@ -1,23 +1,10 @@
 package org.peidevs.waro.player;
 
-public primitive class PlayerStats {
-    private int total;
-    private int numGamesWon; 
-    private int numRoundsWon;
+public primitive record PlayerStats(int total, int numGamesWon, int numRoundsWon) {
 
     public PlayerStats() {
         this(0, 0, 0);
     }
-    
-    public PlayerStats(int total, int numGamesWon, int numRoundsWon) {
-        this.total = total;
-        this.numGamesWon = numGamesWon;
-        this.numRoundsWon = numRoundsWon;    
-    }
-
-    public int total() { return total; }
-    public int numGamesWon() { return numGamesWon; }
-    public int numRoundsWon() { return numRoundsWon; }
 
     public String toString() {
         return " total: " + total + " # games: " + numGamesWon + " # rounds: " + numRoundsWon;
