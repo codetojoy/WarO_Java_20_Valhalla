@@ -43,13 +43,13 @@ TEST_TARGET_DIR=$ROOT_DIR/my_build/test
 mkdir -p $TARGET_DIR
 mkdir -p $TEST_TARGET_DIR
 
-javac --release 20 --enable-preview \
+javac --release 20 --enable-preview -XDenablePrimitiveClasses \
 -cp $CLASSPATH \
 -d $TARGET_DIR `find $SRC_DIR -name "*.java"`
 
 CLASSPATH=$CLASSPATH:$TARGET_DIR
 
-javac --release 20 --enable-preview \
+javac --release 20 --enable-preview -XDenablePrimitiveClasses \
 -cp $CLASSPATH \
 -d $TEST_TARGET_DIR `find $TEST_DIR -name "*.java"`
 

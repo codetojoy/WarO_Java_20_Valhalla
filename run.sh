@@ -29,7 +29,7 @@ TARGET_DIR=$ROOT_DIR/my_build/main
 CLASSPATH=$CLASSPATH:$TARGET_DIR
 
 # echo $CLASSPATH
-java --enable-preview \
+java --enable-preview -XX:+EnableValhalla -XX:+EnablePrimitiveClasses \
 -cp $CLASSPATH \
 org.peidevs.waro.Main
 
