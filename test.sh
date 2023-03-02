@@ -43,15 +43,18 @@ TEST_TARGET_DIR=$ROOT_DIR/my_build/test
 CLASSPATH=$CLASSPATH:$TARGET_DIR
 CLASSPATH=$CLASSPATH:$TEST_TARGET_DIR
 
-java --enable-preview -XX:+EnablePrimitiveClasses -jar ./lib/junit-platform-console-standalone-1.9.1.jar --class-path $CLASSPATH --select-class org.peidevs.waro.function.GameTest
-java --enable-preview -XX:+EnablePrimitiveClasses -jar ./lib/junit-platform-console-standalone-1.9.1.jar --class-path $CLASSPATH --select-class org.peidevs.waro.function.TourneyTest
-java --enable-preview -XX:+EnablePrimitiveClasses -jar ./lib/junit-platform-console-standalone-1.9.1.jar --class-path $CLASSPATH --select-class org.peidevs.waro.function.RoundTest
-java --enable-preview -XX:+EnablePrimitiveClasses -jar ./lib/junit-platform-console-standalone-1.9.1.jar --class-path $CLASSPATH --select-class org.peidevs.waro.table.ShuffledDeckProviderTest
-java --enable-preview -XX:+EnablePrimitiveClasses -jar ./lib/junit-platform-console-standalone-1.9.1.jar --class-path $CLASSPATH --select-class org.peidevs.waro.table.DealerTest
-java --enable-preview -XX:+EnablePrimitiveClasses -jar ./lib/junit-platform-console-standalone-1.9.1.jar --class-path $CLASSPATH --select-class org.peidevs.waro.table.HandTest
-java --enable-preview -XX:+EnablePrimitiveClasses -jar ./lib/junit-platform-console-standalone-1.9.1.jar --class-path $CLASSPATH --select-class org.peidevs.waro.player.PlayerTest
-java --enable-preview -XX:+EnablePrimitiveClasses -jar ./lib/junit-platform-console-standalone-1.9.1.jar --class-path $CLASSPATH --select-class org.peidevs.waro.strategy.MinCardTest
-java --enable-preview -XX:+EnablePrimitiveClasses -jar ./lib/junit-platform-console-standalone-1.9.1.jar --class-path $CLASSPATH --select-class org.peidevs.waro.strategy.MaxCardTest
-java --enable-preview -XX:+EnablePrimitiveClasses -jar ./lib/junit-platform-console-standalone-1.9.1.jar --class-path $CLASSPATH --select-class org.peidevs.waro.strategy.NextCardTest
+JUNIT_JAR=./lib/junit-platform-console-standalone-1.9.1.jar
+MY_JAVA_OPTS="--enable-preview -XX:+EnablePrimitiveClasses"
+
+java $MY_JAVA_OPTS -jar $JUNIT_JAR --class-path $CLASSPATH --select-class org.peidevs.waro.function.GameTest
+java $MY_JAVA_OPTS -jar $JUNIT_JAR --class-path $CLASSPATH --select-class org.peidevs.waro.function.TourneyTest
+java $MY_JAVA_OPTS -jar $JUNIT_JAR --class-path $CLASSPATH --select-class org.peidevs.waro.function.RoundTest
+java $MY_JAVA_OPTS -jar $JUNIT_JAR --class-path $CLASSPATH --select-class org.peidevs.waro.table.ShuffledDeckProviderTest
+java $MY_JAVA_OPTS -jar $JUNIT_JAR --class-path $CLASSPATH --select-class org.peidevs.waro.table.DealerTest
+java $MY_JAVA_OPTS -jar $JUNIT_JAR --class-path $CLASSPATH --select-class org.peidevs.waro.table.HandTest
+java $MY_JAVA_OPTS -jar $JUNIT_JAR --class-path $CLASSPATH --select-class org.peidevs.waro.player.PlayerTest
+java $MY_JAVA_OPTS -jar $JUNIT_JAR --class-path $CLASSPATH --select-class org.peidevs.waro.strategy.MinCardTest
+java $MY_JAVA_OPTS -jar $JUNIT_JAR --class-path $CLASSPATH --select-class org.peidevs.waro.strategy.MaxCardTest
+java $MY_JAVA_OPTS -jar $JUNIT_JAR --class-path $CLASSPATH --select-class org.peidevs.waro.strategy.NextCardTest
 
 echo "Ready."
